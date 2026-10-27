@@ -482,20 +482,36 @@
        QUICK CONTACT / FLOATING CTA
     ═══════════════════════════════════════════ */
     #contact{background:var(--charcoal)}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-    .contact-info{}
-    .contact-info p{color:var(--muted);margin-bottom:32px}
-    .contact-cards{display:flex;flex-direction:column;gap:16px}
-    .cc{display:flex;align-items:center;gap:16px;padding:18px;background:var(--dark);border:1px solid var(--border);transition:border-color var(--transition)}
-    .cc:hover{border-color:rgba(201,168,76,.4)}
-    .cc-icon{width:44px;height:44px;background:rgba(201,168,76,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-    .cc-label{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-    .cc-val{font-size:.92rem;color:var(--white);font-weight:600;margin-top:2px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch}
+    .contact-info{display:flex;flex-direction:column}
+    .contact-info p{color:var(--muted);margin-bottom:28px}
+    .contact-cards{display:flex;flex-direction:column;gap:12px;flex:1;justify-content:space-between}
+    .cc{display:flex;align-items:center;gap:16px;padding:15px 18px;background:var(--dark);border:1px solid var(--border);border-radius:4px;transition:border-color var(--transition),transform var(--transition)}
+    .cc:hover{border-color:rgba(201,168,76,.45);transform:translateX(4px)}
+    .cc-icon{width:42px;height:42px;background:rgba(201,168,76,.1);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+    .cc-label{font-size:.68rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+    .cc-val{font-size:.9rem;color:var(--white);font-weight:600;margin-top:2px}
     .cc-val a{color:var(--gold)}
     /* quick message form */
-    .qform{background:var(--dark);border:1px solid var(--border);padding:32px}
-    .qform h3{color:var(--white);margin-bottom:4px}
-    .qform p{font-size:.83rem;color:var(--muted);margin-bottom:24px}
+    .qform{
+      background:var(--dark);
+      border:1px solid var(--border);
+      border-radius:4px;
+      padding:32px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:relative;
+    }
+    .qform::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg,var(--gold),var(--amber));
+      border-radius:4px 4px 0 0;
+    }
+    .qform h3{color:var(--white);margin-bottom:4px;font-size:1.2rem}
+    .qform p{font-size:.83rem;color:var(--muted);margin-bottom:20px}
+    .qform .form-group:last-of-type{margin-bottom:24px}
+    .qform textarea{min-height:120px}
 
     /* ═══════════════════════════════════════════
        FAQ
