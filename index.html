@@ -100,21 +100,21 @@
     /* ═══════════════════════════════════════════
        HERO
     ═══════════════════════════════════════════ */
-    #hero{min-height:calc(100vh - 105px);display:flex;align-items:center;position:relative;overflow:hidden;background:var(--dark)}
+    #hero{min-height:auto;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--dark);padding:24px 0 40px}
     /* diagonal amber strip */
     .hero-strip{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(135deg,transparent 40%,rgba(201,168,76,.045) 100%);pointer-events:none}
     /* blueprint SVG */
     .hero-blueprint{position:absolute;right:0;bottom:0;width:55%;opacity:.12;pointer-events:none}
-    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 0.95fr;gap:60px;align-items:center;padding:70px 40px;max-width:1220px;margin:0 auto;width:100%}
-    .hero-eyebrow{display:flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
-    .hero-eyebrow span{width:28px;height:1px;background:var(--gold)}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;padding:16px 40px 30px;max-width:1220px;margin:0 auto;width:100%}
+    .hero-eyebrow{display:flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+    .hero-eyebrow span{width:24px;height:1px;background:var(--gold)}
     .hero-name-hero{
       font-size:clamp(3.2rem,6.5vw,5.6rem);
       font-weight:900;
       color:var(--white);
       line-height:0.95;
       letter-spacing:-2px;
-      margin-bottom:16px;
+      margin-bottom:12px;
       text-transform:uppercase;
     }
     .hero-name-hero span{
